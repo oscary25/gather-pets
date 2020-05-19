@@ -33,7 +33,11 @@
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.11.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "html-react-parser": "0.0.4",
+    "sass": "^1.26.5",
+    "styled-components": "^5.1.0"
+  },
   "standard": {
     "ignore": [
       "/api/**"
