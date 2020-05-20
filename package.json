@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "dev": "webpack-dev-server",
+    "start": "webpack-dev-server",
     "linter": "standard"
   },
   "repository": {
@@ -35,6 +35,7 @@
   },
   "dependencies": {
     "html-react-parser": "0.0.4",
+    "react-icons": "^3.10.0",
     "sass": "^1.26.5",
     "styled-components": "^5.1.0"
   },
