@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Fragment } from "react";
 
 import { List, Item } from "./styles.js";
 import Category from "./../Category";
+
 const ListOfCategories = () => {
   const [valueCategories, setValueCategories] = useState([]);
 
@@ -15,7 +16,7 @@ const ListOfCategories = () => {
   }, []);
 
   return (
-    <div>
+    <Fragment>
       <List>
         {valueCategories.map((category) => (
           <Item key={category.id}>
@@ -23,7 +24,7 @@ const ListOfCategories = () => {
           </Item>
         ))}
       </List>
-    </div>
+    </Fragment>
   );
 };
 
