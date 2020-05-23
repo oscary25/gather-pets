@@ -30,7 +30,7 @@ const PhotoCard = ({ id, like = 0, src = DEFAULT_IMAGE }) => {
       <Article ref={ref}>
         {show && (
           <Fragment>
-            <a href={`/detail/${id}`}>
+            <a href={`/?detail=${id}`}>
               <ImgWrapper>
                 <Img src={src} alt="" />
               </ImgWrapper>
