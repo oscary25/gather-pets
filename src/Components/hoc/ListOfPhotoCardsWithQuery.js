@@ -24,7 +24,7 @@ export const ListOfPhotoCardsWithQuery = ({ id }) => (
       if (loading) {
         return <h1>Cargando...</h1>;
       } else {
-        const { photo } = data;
+        const { photo = {} } = data;
         return <PhotoCard photo={photo} />;
       }
     }}
