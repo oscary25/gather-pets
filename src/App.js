@@ -5,6 +5,7 @@ import { GlobalStyle } from "./Styles/GlobalStyles";
 import Home from "./pages/Home";
 import Logo from "./Components/Logo";
 import { ListOfPhotoCardsWithQuery } from "./Components/hoc/ListOfPhotoCardsWithQuery";
+import NavBar from "./Components/NavBar";
 const App = () => {
   const urlParams = new window.URLSearchParams(window.location.search);
   const detailId = urlParams.get("detail");
@@ -21,6 +22,7 @@ const App = () => {
           <Home path="/path/:id" />
         </Router>
       )}
+      <NavBar />
     </div>
   );
 };
