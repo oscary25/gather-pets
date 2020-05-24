@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React from "react";
 import { Router } from "@reach/router";
 
 import { GlobalStyle } from "./Styles/GlobalStyles";
