@@ -1,5 +1,6 @@
 import React from "react";
 
+import { Form, Input, Button } from "./styles";
 import useInputValue from "../Hooks/useInputValue";
 const UserForm = ({ onSubmit }) => {
   const value = useInputValue({
@@ -9,11 +10,11 @@ const UserForm = ({ onSubmit }) => {
 
   return (
     <div>
-      <form onSubmit={onSubmit}>
-        <input placeholder="Email" {...value.Email} />
-        <input placeholder="Password" type="password" {...value.Password} />
-        <button>Iniciar sesión.</button>
-      </form>
+      <Form onSubmit={onSubmit}>
+        <Input placeholder="Email" {...value.Email} />
+        <Input placeholder="Password" type="password" {...value.Password} />
+        <Button>Iniciar sesión.</Button>
+      </Form>
     </div>
   );
 };
