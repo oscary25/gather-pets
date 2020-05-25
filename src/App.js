@@ -9,13 +9,10 @@ import NoRegister from "./pages/NoRegister";
 import Logo from "./Components/Logo";
 import { ListOfPhotoCardsWithQuery } from "./Components/hoc/ListOfPhotoCardsWithQuery";
 import NavBar from "./Components/NavBar";
+import Context from "./Context";
 const App = () => {
   const urlParams = new window.URLSearchParams(window.location.search);
   const detailId = urlParams.get("detail");
-
-  const UserLogged = ({ children }) => {
-    return children({ isAuth: true });
-  };
 
   return (
     <div>
@@ -32,7 +29,7 @@ const App = () => {
             <Favs path="/favs" />
             <User path="/user" />
           </Router>
-          <UserLogged>
+          <Context.Consumer>
             {({ isAuth }) =>
               isAuth ? (
                 <Router>
@@ -46,7 +43,7 @@ const App = () => {
                 </Router>
               )
             }
-          </UserLogged>
+          </Context.Consumer>
         </div>
       )}
       <NavBar />
