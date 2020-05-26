@@ -8,9 +8,14 @@ const UserForm = ({ onSubmit }) => {
     Password: "",
   });
 
+  const handleSubmit = (e) => {
+    e.preventDefault;
+    onSubmit({ ...value });
+  };
+
   return (
     <div>
-      <Form onSubmit={onSubmit}>
+      <Form onSubmit={handleSubmit}>
         <Input placeholder="Email" {...value.Email} />
         <Input placeholder="Password" type="password" {...value.Password} />
         <Button>Iniciar sesión.</Button>
